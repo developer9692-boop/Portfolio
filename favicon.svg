@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="TechBooster">
+  <rect width="64" height="64" fill="#050505"/>
+  <rect x="0.75" y="0.75" width="62.5" height="62.5" fill="none" stroke="rgba(255,255,255,.16)" stroke-width="1.5"/>
+  <g fill="none" stroke="#F5F5F2" stroke-width="5" stroke-linecap="square">
+    <path d="M15 20h20"/>
+    <path d="M25 20v24"/>
+  </g>
+  <path d="M34 44V20h9a8 8 0 0 1 0 16h-9" fill="none" stroke="#FF1F1F" stroke-width="5" stroke-linecap="square"/>
+  <rect x="0" y="58" width="64" height="6" fill="#FF1F1F"/>
+</svg>

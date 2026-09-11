@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<title>TechBooster — Developer Portfolio</title>
+<meta name="description" content="TechBooster is a Computer Science & Engineering student and developer from Bihar, building web applications, automation tools, Telegram bots and practical digital projects.">
+<meta name="author" content="TechBooster">
+<meta name="theme-color" content="#050505">
+<meta name="color-scheme" content="dark">
+
+<!-- Canonical: replace with the live domain once hosted -->
+<link rel="canonical" href="https://example.com/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TechBooster">
+<meta property="og:title" content="TechBooster — Developer Portfolio">
+<meta property="og:description" content="Computer Science & Engineering student and developer from Bihar, building web applications, automation tools, Telegram bots and practical digital projects.">
+<meta property="og:url" content="https://example.com/">
+<meta property="og:image" content="assets/poster.jpg">
+<meta property="og:locale" content="en_IN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TechBooster — Developer Portfolio">
+<meta name="twitter:description" content="Computer Science & Engineering student and developer from Bihar, building web applications, automation tools, Telegram bots and practical digital projects.">
+<meta name="twitter:image" content="assets/poster.jpg">
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+
+<!-- Enables progressive-reveal states only when JS is available -->
+<script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js');</script>
+</head>
+
+<body>
+
+<!-- ============ CINEMATIC ATMOSPHERE LAYERS ============ -->
+<div class="ambient" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ============ SCROLL PROGRESS (1px) ============ -->
+<div class="progress" aria-hidden="true"><i id="progressBar"></i></div>
+
+<!-- ============ CUSTOM CURSOR (desktop only) ============ -->
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+<!-- ============ TOP INFORMATION LAYER (black canvas HUD) ============ -->
+<div class="hud boot" style="--bd:.08s" aria-hidden="true">
+  <span class="hud-l">TECHBOOSTER</span>
+  <span class="hud-r"><span id="hudChapter">01</span> / 08</span>
+</div>
+
+<!-- ============ CHAPTER RAIL ============ -->
+<nav class="rail" aria-label="Chapter navigation">
+  <ol>
+    <li><a href="#intro"     data-rail="01"><span class="rail-n">01</span><span class="rail-t">INTRO</span></a></li>
+    <li><a href="#about"     data-rail="02"><span class="rail-n">02</span><span class="rail-t">ABOUT</span></a></li>
+    <li><a href="#skills"    data-rail="03"><span class="rail-n">03</span><span class="rail-t">SKILLS</span></a></li>
+    <li><a href="#projects"  data-rail="04"><span class="rail-n">04</span><span class="rail-t">PROJECTS</span></a></li>
+    <li><a href="#education" data-rail="05"><span class="rail-n">05</span><span class="rail-t">EDUCATION</span></a></li>
+    <li><a href="#focus"     data-rail="06"><span class="rail-n">06</span><span class="rail-t">FOCUS</span></a></li>
+    <li><a href="#contact"   data-rail="07"><span class="rail-n">07</span><span class="rail-t">CONTACT</span></a></li>
+    <li><a href="#closing"   data-rail="08"><span class="rail-n">08</span><span class="rail-t">CLOSING</span></a></li>
+  </ol>
+</nav>
+
+<!-- ============ BOTTOM CAPTION ============ -->
+<p class="caption" aria-hidden="true">BUILDING THINGS THAT ACTUALLY WORK.</p>
+
+<!-- ============ STAGE (black canvas + framed composition) ============ -->
+<div class="stage">
+  <div class="frame">
+
+    <!-- ---------- MAIN NAVIGATION ---------- -->
+    <header class="topbar boot" style="--bd:.18s" id="topbar">
+      <a class="brand" href="#intro" data-cursor="link">TECHBOOSTER</a>
+
+      <nav class="nav-center" aria-label="Primary">
+        <a href="#about"     data-cursor="link">ABOUT</a>
+        <span class="sep" aria-hidden="true"></span>
+        <a href="#skills"    data-cursor="link">SKILLS</a>
+        <span class="sep" aria-hidden="true"></span>
+        <a href="#projects"  data-cursor="link">PROJECTS</a>
+        <span class="sep" aria-hidden="true"></span>
+        <a href="#education" data-cursor="link">EDUCATION</a>
+      </nav>
+
+      <div class="nav-right">
+        <a class="nav-contact" href="#contact" data-cursor="link">CONTACT</a>
+        <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mobileMenu" data-cursor="link">
+          <span>MENU</span>
+          <svg viewBox="0 0 14 10" width="14" height="10" aria-hidden="true"><path d="M0 1h14M0 9h14" stroke="currentColor" stroke-width="1.2"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- ---------- MOBILE MENU ---------- -->
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <nav aria-label="Mobile">
+        <ol>
+          <li><a href="#about"     data-cursor="link"><span class="mm-n">02</span>ABOUT</a></li>
+          <li><a href="#skills"    data-cursor="link"><span class="mm-n">03</span>SKILLS</a></li>
+          <li><a href="#projects"  data-cursor="link"><span class="mm-n">04</span>PROJECTS</a></li>
+          <li><a href="#education" data-cursor="link"><span class="mm-n">05</span>EDUCATION</a></li>
+          <li><a href="#focus"     data-cursor="link"><span class="mm-n">06</span>FOCUS</a></li>
+          <li><a href="#contact"   data-cursor="link"><span class="mm-n">07</span>CONTACT</a></li>
+        </ol>
+      </nav>
+      <p class="mm-foot">TECHBOOSTER — BIHAR, INDIA</p>
+    </div>
+
+    <main id="main">
+
+      <!-- ============================================================
+           CHAPTER 01 — INTRO / POV / RED CINEMATIC HERO
+           ============================================================ -->
+      <section class="ch ch-intro" id="intro" data-chapter="01" aria-labelledby="heroTitle">
+
+        <div class="pov boot" style="--bd:.30s">
+          <p class="pov-line reveal" data-stagger>
+            <span class="rl"><span class="rli"><em>POV:</em> When a developer portfolio</span></span>
+            <span class="rl"><span class="rli">feels like a digital experience.</span></span>
+          </p>
+        </div>
+
+        <div class="hero">
+          <div class="hero-panel boot" style="--bd:.44s" id="heroPanel">
+
+            <video
+              id="heroVideo"
+              class="hero-video"
+              playsinline
+              preload="metadata"
+              muted
+              loop
+              poster="assets/poster.jpg"
+              aria-label="TechBooster cinematic introduction">
+              <source src="assets/tb.mp4" type="video/mp4">
+            </video>
+
+            <!-- Shown only if the video asset cannot be loaded -->
+            <div class="hero-fallback" id="heroFallback" aria-hidden="true">
+              <svg viewBox="0 0 400 260" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                  <pattern id="hfGrid" width="34" height="34" patternUnits="userSpaceOnUse">
+                    <path d="M34 0H0v34" fill="none" stroke="rgba(5,5,5,.16)" stroke-width="1"/>
+                  </pattern>
+                </defs>
+                <rect width="400" height="260" fill="url(#hfGrid)"/>
+                <text x="200" y="146" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif"
+                      font-size="86" font-weight="800" letter-spacing="-4" fill="#050505" opacity=".9">TB</text>
+              </svg>
+            </div>
+
+            <div class="hero-scrim" aria-hidden="true"></div>
+
+            <div class="hero-layer">
+              <div class="hero-tl boot" style="--bd:1.00s">
+                <span class="idx">01</span>
+                <span class="micro">HELLO, I'M TECHBOOSTER</span>
+              </div>
+
+              <div class="hero-tr boot" style="--bd:1.06s">
+                <span class="micro">BIHAR / INDIA</span>
+              </div>
+
+              <div class="hero-bottom boot" style="--bd:1.12s">
+                <div class="hero-copy">
+                  <h1 class="hero-title reveal reveal-hero" id="heroTitle">
+                    <span class="rl"><span class="rli">Hi, I'm</span></span>
+                    <span class="rl"><span class="rli"><em>TechBooster.</em></span></span>
+                  </h1>
+
+                  <p class="hero-sub">A Computer Science &amp; Engineering student and developer from Bihar.</p>
+
+                  <p class="hero-desc">I build practical applications, automation tools, Telegram bots, modern web
+                    experiences and useful digital products.</p>
+                </div>
+
+                <div class="hero-actions">
+                  <a class="btn btn-solid" href="#projects" data-cursor="link">
+                    VIEW PROJECTS
+                    <svg class="arw" viewBox="0 0 16 10" width="16" height="10" aria-hidden="true"><path d="M0 5h14M10 1l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.3"/></svg>
+                  </a>
+                  <a class="btn btn-outline-light" href="#about" data-cursor="link">ABOUT ME</a>
+                </div>
+              </div>
+
+              <div class="hero-role boot" style="--bd:1.24s"><span class="micro">CSE STUDENT / DEVELOPER / BUILDER</span></div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           CHAPTER 02 — ABOUT (WHITE EDITORIAL)
+           ============================================================ -->
+      <section class="ch ch-white" id="about" data-chapter="02" aria-labelledby="aboutTitle">
+        <div class="w-inner">
+
+          <div class="w-top">
+            <span class="tag tag-dark">02 — ABOUT</span>
+          </div>
+
+          <div class="w-head">
+            <h2 class="h2 about-title reveal" id="aboutTitle" data-stagger>
+              <span class="rl"><span class="rli">Here's how I turn ideas</span></span>
+              <span class="rl"><span class="rli">into real-world</span></span>
+              <span class="rl"><span class="rli"><em>applications.</em></span></span>
+            </h2>
+
+            <div class="w-side">
+              <p class="lead lead-dark">I enjoy building practical software, automation tools, Telegram bots, web
+                experiences and application projects that solve real problems.</p>
+            </div>
+          </div>
+
+          <div class="rule rule-dark"></div>
+
+          <div class="w-body">
+            <div class="w-col">
+              <span class="micro micro-dark">ORIGIN</span>
+              <p>Hi, I'm TechBooster, a passionate Computer Science &amp; Engineering student and developer from
+                Bihar. I enjoy building practical applications, automation tools, Telegram bots, and modern app
+                projects.</p>
+            </div>
+            <div class="w-col">
+              <span class="micro micro-dark">BACKGROUND</span>
+              <p>Completed 10th from Sitamarhi, Bihar and currently pursuing Computer Science &amp; Engineering
+                (CSE).</p>
+            </div>
+            <div class="w-col">
+              <span class="micro micro-dark">APPROACH</span>
+              <p>I continuously learn new technologies and work on projects combining software development,
+                automation, and real-world problem solving.</p>
+            </div>
+          </div>
+
+          <div class="rule rule-dark"></div>
+
+          <div class="w-meta">
+            <span>TECHBOOSTER</span>
+            <span>BIHAR, INDIA</span>
+            <span>COMPUTER SCIENCE &amp; ENGINEERING</span>
+            <span>PORTFOLIO — 2026</span>
+          </div>
+        </div>
+
+        <!-- IDENTITY STRIP -->
+        <div class="strip" aria-hidden="true">
+          <div class="strip-track">
+            <span>TECHBOOSTER</span><span>/</span><span>CSE</span><span>/</span><span>DEVELOPER</span><span>/</span><span>AUTOMATION</span><span>/</span><span>TELEGRAM BOTS</span><span>/</span><span>WEB</span><span>/</span><span>APPS</span><span>/</span>
+            <span>TECHBOOSTER</span><span>/</span><span>CSE</span><span>/</span><span>DEVELOPER</span><span>/</span><span>AUTOMATION</span><span>/</span><span>TELEGRAM BOTS</span><span>/</span><span>WEB</span><span>/</span><span>APPS</span><span>/</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           CHAPTER 03 — SKILLS (BLACK)
+           ============================================================ -->
+      <section class="ch ch-dark" id="skills" data-chapter="03" aria-labelledby="skillsTitle">
+        <div class="s-inner">
+
+          <div class="ch-head">
+            <span class="tag">03 — SKILLS</span>
+            <h2 class="h2 reveal" id="skillsTitle" data-stagger>
+              <span class="rl"><span class="rli">Things I</span></span>
+              <span class="rl"><span class="rli"><em>build with.</em></span></span>
+            </h2>
+          </div>
+
+          <ol class="skill-list">
+            <li data-fade><span class="sk-n">01</span><span class="sk-t">LINUX OPERATING SYSTEM</span><span class="sk-line"></span></li>
+            <li data-fade><span class="sk-n">02</span><span class="sk-t">JAVA</span><span class="sk-line"></span></li>
+            <li data-fade><span class="sk-n">03</span><span class="sk-t">PYTHON</span><span class="sk-line"></span></li>
+            <li data-fade><span class="sk-n">04</span><span class="sk-t">C++</span><span class="sk-line"></span></li>
+            <li data-fade><span class="sk-n">05</span><span class="sk-t">DATA STRUCTURES &amp; ALGORITHMS</span><span class="sk-line"></span></li>
+            <li data-fade><span class="sk-n">06</span><span class="sk-t">FRONTEND DEVELOPMENT</span><span class="sk-line"></span></li>
+            <li data-fade><span class="sk-n">07</span><span class="sk-t">WEB DEVELOPMENT</span><span class="sk-line"></span></li>
+            <li data-fade><span class="sk-n">08</span><span class="sk-t">APP DEVELOPMENT</span><span class="sk-line"></span></li>
+            <li data-fade><span class="sk-n">09</span><span class="sk-t">DATABASE MANAGEMENT</span><span class="sk-line"></span></li>
+            <li data-fade><span class="sk-n">10</span><span class="sk-t">GIT &amp; GITHUB</span><span class="sk-line"></span></li>
+            <li data-fade><span class="sk-n">11</span><span class="sk-t">TELEGRAM BOT DEVELOPMENT</span><span class="sk-line"></span></li>
+            <li data-fade><span class="sk-n">12</span><span class="sk-t">API INTEGRATION</span><span class="sk-line"></span></li>
+            <li data-fade><span class="sk-n">13</span><span class="sk-t">AUTOMATION &amp; SCRIPTING</span><span class="sk-line"></span></li>
+            <li data-fade><span class="sk-n">14</span><span class="sk-t">DEBUGGING &amp; TROUBLESHOOTING</span><span class="sk-line"></span></li>
+          </ol>
+
+          <div class="rule"></div>
+
+          <div class="prof">
+            <div class="prof-head">
+              <span class="tag">PROFESSIONAL</span>
+              <p class="lead">How I work — beyond the code.</p>
+            </div>
+
+            <div class="prof-cols">
+              <ol class="prof-list">
+                <li><span class="pk">01</span>COMMUNICATION</li>
+                <li><span class="pk">02</span>PROBLEM SOLVING</li>
+                <li><span class="pk">03</span>CRITICAL THINKING</li>
+                <li><span class="pk">04</span>TEAMWORK &amp; COLLABORATION</li>
+                <li><span class="pk">05</span>TIME MANAGEMENT</li>
+              </ol>
+              <ol class="prof-list">
+                <li><span class="pk">06</span>ADAPTABILITY</li>
+                <li><span class="pk">07</span>FAST LEARNING</li>
+                <li><span class="pk">08</span>PROJECT MANAGEMENT</li>
+                <li><span class="pk">09</span>CREATIVITY</li>
+                <li><span class="pk">10</span>LOGICAL THINKING</li>
+              </ol>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ============================================================
+           CHAPTER 04 — PROJECTS (RED OPENER → BLACK CASE STUDIES)
+           ============================================================ -->
+      <section class="ch ch-projects" id="projects" data-chapter="04" aria-labelledby="projectsTitle">
+
+        <div class="pr-opener">
+          <span class="tag tag-dark">04 — PROJECTS</span>
+          <h2 class="h2 reveal" id="projectsTitle" data-stagger>
+            <span class="rl"><span class="rli"><em>Selected</em></span></span>
+            <span class="rl"><span class="rli">work.</span></span>
+          </h2>
+          <p class="lead lead-dark pr-note">Practical applications, automation tools and digital projects built with
+            curiosity and code.</p>
+        </div>
+
+        <div class="pr-list">
+
+          <!-- PROJECT 01 -->
+          <article class="pr" data-fade data-cursor="project">
+            <div class="pr-meta">
+              <span class="pr-num">01</span>
+              <span class="pr-cat">GIS / HEALTH / WEB</span>
+            </div>
+
+            <div class="pr-row">
+              <div class="pr-info">
+                <h3 class="pr-title">Health GIS<br>Applications</h3>
+                <p class="pr-desc">A collection of health-focused GIS applications designed to work with healthcare
+                  locations and geographical data, including health facilities and related information.</p>
+                <a class="pr-link" href="https://helathgid.site.je" target="_blank" rel="noopener noreferrer" data-cursor="link">
+                  VIEW PROJECT
+                  <svg class="arw" viewBox="0 0 16 10" width="16" height="10" aria-hidden="true"><path d="M0 5h14M10 1l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.3"/></svg>
+                </a>
+              </div>
+
+              <div class="pr-visual">
+                <svg viewBox="0 0 800 520" role="img" aria-label="Abstract map-inspired composition with location nodes">
+                  <defs>
+                    <pattern id="gisGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+                      <path d="M40 0H0v40" fill="none" stroke="rgba(255,255,255,.07)" stroke-width="1"/>
+                    </pattern>
+                    <linearGradient id="gisBg" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0" stop-color="#0C0C0C"/><stop offset="1" stop-color="#070707"/>
+                    </linearGradient>
+                  </defs>
+                  <rect width="800" height="520" fill="url(#gisBg)"/>
+                  <rect width="800" height="520" fill="url(#gisGrid)"/>
+                  <g fill="none" stroke="rgba(255,255,255,.16)" stroke-width="1">
+                    <path d="M-20 392C110 312 214 424 336 344S566 250 820 336"/>
+                    <path d="M-20 300C120 236 250 330 372 262S600 176 820 250"/>
+                    <path d="M-20 208C130 156 268 240 388 180S620 108 820 168"/>
+                  </g>
+                  <g fill="none" stroke="rgba(255,255,255,.10)" stroke-width="1">
+                    <path d="M170 -10V530M420 -10V530M640 -10V530"/>
+                  </g>
+                  <path class="gis-route" d="M120 424L262 300L432 352L612 208" fill="none" stroke="#FF1F1F"
+                        stroke-width="1.8" stroke-dasharray="7 9"/>
+                  <g fill="#F5F5F2">
+                    <circle cx="120" cy="424" r="4"/><circle cx="262" cy="300" r="4"/><circle cx="432" cy="352" r="4"/>
+                  </g>
+                  <circle cx="612" cy="208" r="16" fill="none" stroke="#FF1F1F" stroke-width="1"/>
+                  <circle cx="612" cy="208" r="26" fill="none" stroke="rgba(255,31,31,.35)" stroke-width="1"/>
+                  <circle cx="612" cy="208" r="5" fill="#FF1F1F"/>
+                  <g stroke="#FF1F1F" stroke-width="1">
+                    <path d="M612 168v14M612 234v14M572 208h14M638 208h14"/>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 02 -->
+          <article class="pr pr-alt" data-fade data-cursor="project">
+            <div class="pr-meta">
+              <span class="pr-num">02</span>
+              <span class="pr-cat">TELEGRAM / AUTOMATION / BOT DEVELOPMENT</span>
+            </div>
+
+            <div class="pr-row">
+              <div class="pr-info">
+                <h3 class="pr-title">Telegram Bot<br>Projects</h3>
+                <p class="pr-desc">A collection of Telegram bots and automation projects built for different purposes,
+                  including utility, automation, and service-based applications.</p>
+                <a class="pr-link" href="https://techboostertgprojects.vercel.app" target="_blank" rel="noopener noreferrer" data-cursor="link">
+                  VIEW PROJECT
+                  <svg class="arw" viewBox="0 0 16 10" width="16" height="10" aria-hidden="true"><path d="M0 5h14M10 1l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.3"/></svg>
+                </a>
+              </div>
+
+              <div class="pr-visual">
+                <svg viewBox="0 0 800 520" role="img" aria-label="Abstract bot interface with connected message blocks">
+                  <rect width="800" height="520" fill="#0A0A0A"/>
+                  <g stroke="rgba(255,255,255,.14)" stroke-width="1" fill="none">
+                    <path d="M400 260L182 150M400 260L182 372M400 260L624 150M400 260L624 372"/>
+                  </g>
+                  <g fill="none" stroke="rgba(255,255,255,.34)" stroke-width="1.2">
+                    <rect x="96" y="126" width="172" height="48" rx="4"/>
+                    <rect x="96" y="348" width="172" height="48" rx="4"/>
+                    <rect x="538" y="126" width="172" height="48" rx="4"/>
+                  </g>
+                  <g stroke="rgba(255,255,255,.30)" stroke-width="2">
+                    <path d="M114 144h96M114 156h132M114 366h120M114 378h72M556 144h118M556 156h84"/>
+                  </g>
+                  <rect x="538" y="348" width="172" height="48" rx="4" fill="#FF1F1F"/>
+                  <g stroke="#050505" stroke-width="2">
+                    <path d="M556 366h112M556 378h74"/>
+                  </g>
+                  <path d="M400 206l54 31v62l-54 31-54-31v-62z" fill="none" stroke="#F5F5F2" stroke-width="1.4"/>
+                  <circle cx="400" cy="268" r="12" fill="none" stroke="#FF1F1F" stroke-width="1.4"/>
+                  <circle cx="400" cy="268" r="4" fill="#FF1F1F"/>
+                  <g stroke="rgba(255,255,255,.10)" stroke-width="1">
+                    <path d="M0 60h800M0 460h800"/>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 03 -->
+          <article class="pr" data-fade data-cursor="project">
+            <div class="pr-meta">
+              <span class="pr-num">03</span>
+              <span class="pr-cat">SMM / AUTOMATION / DIGITAL GROWTH</span>
+            </div>
+
+            <div class="pr-row">
+              <div class="pr-info">
+                <h3 class="pr-title">SMM Panel</h3>
+                <p class="pr-desc">A Social Media Marketing platform focused on social media services, automation,
+                  and digital growth solutions.</p>
+                <a class="pr-link" href="https://astropulsesmm.vercel.app" target="_blank" rel="noopener noreferrer" data-cursor="link">
+                  VIEW PROJECT
+                  <svg class="arw" viewBox="0 0 16 10" width="16" height="10" aria-hidden="true"><path d="M0 5h14M10 1l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.3"/></svg>
+                </a>
+              </div>
+
+              <div class="pr-visual">
+                <svg viewBox="0 0 800 520" role="img" aria-label="Abstract red and black composition">
+                  <rect width="800" height="520" fill="#070707"/>
+                  <rect x="0" y="0" width="286" height="520" fill="#FF1F1F"/>
+                  <g stroke="rgba(5,5,5,.42)" stroke-width="1">
+                    <path d="M40 0v520M96 0v520M152 0v520M208 0v520"/>
+                  </g>
+                  <g stroke="rgba(255,255,255,.16)" stroke-width="1">
+                    <path d="M330 90h430M330 190h430M330 290h430M330 390h430M330 470h430"/>
+                  </g>
+                  <g fill="#F5F5F2" opacity=".85">
+                    <rect x="330" y="112" width="238" height="6"/>
+                    <rect x="330" y="212" width="352" height="6"/>
+                    <rect x="330" y="312" width="164" height="6"/>
+                    <rect x="330" y="412" width="296" height="6"/>
+                  </g>
+                  <rect x="330" y="212" width="352" height="6" fill="#FF1F1F"/>
+                  <circle cx="640" cy="420" r="76" fill="none" stroke="rgba(255,255,255,.14)" stroke-width="1"/>
+                  <path d="M640 344a76 76 0 0 1 66 114" fill="none" stroke="#FF1F1F" stroke-width="3"/>
+                  <g stroke="rgba(255,255,255,.10)" stroke-width="1">
+                    <path d="M286 0L800 520"/>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- ============================================================
+           CHAPTER 05 — EDUCATION (BLACK, MINIMAL)
+           ============================================================ -->
+      <section class="ch ch-dark" id="education" data-chapter="05" aria-labelledby="eduTitle">
+        <div class="s-inner">
+
+          <div class="ch-head">
+            <span class="tag">05 — EDUCATION</span>
+            <h2 class="h2 reveal" id="eduTitle" data-stagger>
+              <span class="rl"><span class="rli"><em>Education</em></span></span>
+            </h2>
+          </div>
+
+          <div class="edu-list">
+            <article class="edu" data-fade>
+              <div class="edu-k">
+                <span class="micro">ENTRY 01</span>
+                <h3 class="h3">10th</h3>
+                <p class="edu-place">Sitamarhi, Bihar</p>
+              </div>
+              <p class="edu-desc">Completed my 10th education in Sitamarhi, Bihar.</p>
+            </article>
+
+            <article class="edu" data-fade>
+              <div class="edu-k">
+                <span class="micro">ENTRY 02</span>
+                <h3 class="h3">Computer Science<br>&amp; Engineering</h3>
+              </div>
+              <p class="edu-desc">Currently pursuing Computer Science &amp; Engineering (CSE) and expanding my
+                knowledge through academic learning, personal projects, and practical development.</p>
+            </article>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ============================================================
+           CHAPTER 06 — FOCUS + PHILOSOPHY (BLACK, CINEMATIC)
+           ============================================================ -->
+      <section class="ch ch-focus" id="focus" data-chapter="06" aria-labelledby="focusTitle">
+        <div class="s-inner">
+
+          <div class="ch-head">
+            <span class="tag">06 — CURRENT FOCUS</span>
+          </div>
+
+          <div class="focus-grid">
+            <div class="focus-tags focus-top">
+              <span>SOFTWARE DEVELOPMENT</span>
+              <span>AUTOMATION</span>
+              <span>TELEGRAM BOTS</span>
+              <span>WEB DEVELOPMENT</span>
+            </div>
+
+            <h2 class="focus-h reveal" id="focusTitle" data-stagger>
+              <span class="rl"><span class="rli">Currently building,</span></span>
+              <span class="rl"><span class="rli">learning &amp;</span></span>
+              <span class="rl"><span class="rli"><em>experimenting.</em></span></span>
+            </h2>
+
+            <div class="focus-tags focus-bottom">
+              <span>APP DEVELOPMENT</span>
+              <span>APIs</span>
+              <span>DATABASES</span>
+              <span>LINUX</span>
+              <span>PROBLEM SOLVING</span>
+            </div>
+          </div>
+
+          <div class="rule"></div>
+
+          <blockquote class="philosophy">
+            <span class="ph-line" aria-hidden="true"></span>
+            <p class="ph-text reveal" data-stagger>
+              <span class="rl"><span class="rli">I don't just want to write code.</span></span>
+              <span class="rl"><span class="rli">I want to turn ideas into things</span></span>
+              <span class="rl"><span class="rli"><em>people can actually use.</em></span></span>
+            </p>
+          </blockquote>
+
+        </div>
+      </section>
+
+      <!-- ============================================================
+           CHAPTER 07 — RED FEATURE + CONTACT
+           ============================================================ -->
+      <section class="ch ch-contact" id="contact" data-chapter="07" aria-labelledby="contactTitle">
+
+        <div class="red-feature">
+          <div class="rf-inner">
+            <p class="rf-statement">
+              <span>BUILD.</span>
+              <span>AUTOMATE.</span>
+              <span><em>EXPERIMENT.</em></span>
+            </p>
+            <div class="rf-rule" aria-hidden="true"></div>
+            <p class="rf-sub">Turning ideas, problems and experiments into practical digital experiences.</p>
+          </div>
+        </div>
+
+        <div class="cta-wrap">
+          <div class="cta-inner">
+            <span class="tag">07 — CONTACT</span>
+
+            <h2 class="h2 reveal" id="contactTitle" data-stagger>
+              <span class="rl"><span class="rli">Have an idea?</span></span>
+              <span class="rl"><span class="rli"><em>Let's build it.</em></span></span>
+            </h2>
+
+            <p class="lead cta-lead">Whether it's a web application, automation tool, Telegram bot or something
+              completely new, I'm always interested in building useful things.</p>
+
+            <a class="btn btn-red" id="projectCta" href="#contact" data-cursor="link">
+              START A PROJECT
+              <svg class="arw" viewBox="0 0 16 10" width="16" height="10" aria-hidden="true"><path d="M0 5h14M10 1l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.3"/></svg>
+            </a>
+
+            <div class="contact-links" id="contactLinks"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           CHAPTER 08 — CLOSING + FOOTER
+           ============================================================ -->
+      <section class="ch ch-closing" id="closing" data-chapter="08" aria-label="Closing">
+        <div class="close-inner">
+          <h2 class="display close-word" aria-label="TechBooster">TECHBOOSTER</h2>
+          <div class="close-roles">
+            <span>COMPUTER SCIENCE &amp; ENGINEERING STUDENT</span>
+            <span>DEVELOPER</span>
+            <span>BUILDER</span>
+          </div>
+          <div class="rule"></div>
+        </div>
+
+        <footer class="footer">
+          <div class="ft-l">
+            <span class="ft-brand">TECHBOOSTER</span>
+            <p class="ft-line">Computer Science &amp; Engineering Student • Developer • Builder</p>
+          </div>
+          <p class="ft-copy">© 2026 TechBooster. All rights reserved.</p>
+        </footer>
+      </section>
+
+    </main>
+  </div>
+</div>
+
+<script src="js/script.js" defer></script>
+</body>
+</html>
